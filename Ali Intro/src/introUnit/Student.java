@@ -11,6 +11,7 @@ public class Student {
 		this.name = name;
 	}
 	public void talk(){
+		String.name
 		System.out.println("Hi, my name is "+name);
 	}
 		}

@@ -14,7 +14,14 @@ public class OOPExample {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		//construct a student
+		Student jillian = new Senior("Jillian");
+		Student jordon = new Student("Jordon");
+		Student jason = new Student("Jason");
+		jillian.talk();
+		jordon.talk();
+		jason.talk();
+		
 
 	}
 
