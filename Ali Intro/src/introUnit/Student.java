@@ -11,7 +11,13 @@ public class Student {
 		this.name = name;
 	}
 	public void talk(){
-		String.name
-		System.out.println("Hi, my name is "+name);
+		super.talk();
+		//call the super method
+		System.out.println("Hi, my name is "+this.name);
 	}
 		}
+
+//encapsulation- private fields
+//polymorphism- calling a sneior a student
+//inheritance-  inheriting the talk method
+//only call super if im a sub class of somethingtaking the instuctor from a super clas

@@ -15,14 +15,15 @@ public class OOPExample {
 	 */
 	public static void main(String[] args) {
 		//construct a student
-		Student jillian = new Senior("Jillian");
+		Student jillian = new Senior("Jillian","programmer");
 		Student jordon = new Student("Jordon");
 		Student jason = new Student("Jason");
 		jillian.talk();
+
 		jordon.talk();
 		jason.talk();
 		
-
+		Student[]
 	}
 
 }
