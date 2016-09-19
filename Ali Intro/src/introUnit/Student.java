@@ -11,7 +11,7 @@ public class Student {
 		this.name = name;
 	}
 	public void talk(){
-		super.talk();
+
 		//call the super method
 		System.out.println("Hi, my name is "+this.name);
 	}

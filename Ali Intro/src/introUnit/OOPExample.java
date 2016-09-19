@@ -22,8 +22,8 @@ public class OOPExample {
 
 		jordon.talk();
 		jason.talk();
-		
-		Student[]
+		((Student)jillian).talk();
+		//Student[] students = {jordan, jillian};
 	}
 
 }
