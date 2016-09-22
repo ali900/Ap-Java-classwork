@@ -5,7 +5,7 @@ public class Senior extends Student {
 
 	public Senior(String name, String internship) {
 		super(name);
-		this.internship = intership;
+
 		// TODO Auto-generated constructor stub
 	}
 	public void talk(){
