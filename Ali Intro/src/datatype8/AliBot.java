@@ -1,4 +1,4 @@
-package datatype8;
+package chatBot;
 
 import java.util.Scanner;
 

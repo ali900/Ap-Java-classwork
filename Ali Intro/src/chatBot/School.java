@@ -13,8 +13,22 @@ public class School implements Topic {
 		while(inSchoolLoop){
 			AliBot.print("Tell me about school.");
 			schoolResponse = AliBot.getInput();
-			i
-			school
+			if(schoolResponse.indexOf("stop")> 0){
+				inSchoolLopp = false;
+				AliBot.talkForever();
+				
+			}
+			
+			else{
+				AliBot.print(s);
+			}
+		}
+		public boolean isTriggered(String userInput){
+			if(AliBot.findKeyword(userInput, "school", 0) >= 0){
+				return true;
+			}
+			
+			
 		}
 	}
 
