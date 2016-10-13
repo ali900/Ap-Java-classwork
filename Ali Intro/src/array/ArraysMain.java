@@ -5,17 +5,33 @@ public class ArraysMain {
 	public static void main(String[] args) {
 		//This is how you time how quickly a computer processes
 		long startTime = System.currentTimeMillis();
+		String[] someStrings = new String[100];
+		populateArray(someStrings);
+		changeString(someStrings[99]);
+		printArray(someStrings);
 		arrayIntroMethod();
 		long endTime = System.currentTimeMillis();
 		System.out.println("Completed method in" +(endTime-startTime)+"milliseconds");
 	}
+	private static void changeString(String s){
+		s= "This string has been changed.";
+	}
+	
+	private static void printArray(String[] b){
+		
+	}
+	
+	private static void populateArray(String[] a){
+		
+	}
+	
 	public static void arrayIntroMethod(){
 		// Construct 3 integer arrays
 		//these two methods do the same thing
 		//primitive type arrays fill with zeroes 0, 0.0, false
 		int[] zeroes1= {0,0,0};
 		int[] zeroes2= new int[3];
-		//if you dont populate array itll be filled with zeroes
+		//if you don't populate array it'll be filled with zeroes
 		boolean[] booleans = new boolean[3];
 		//iterate (2 ways)
 		//FIRST METHOD:"FOR LOOP"
