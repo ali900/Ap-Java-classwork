@@ -39,6 +39,6 @@ public class ArrayMethods {
 		}
 	}
 	private static void print(int[] arr){
-		for()
+		//
 	}
 }
