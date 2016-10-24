@@ -33,9 +33,12 @@ public class ArrayMethods {
 		return searchValue < arr[(begin+end)/2];
 	}
 	private static void shuffle(int[] arr){
-		// 
+		for(int i = 0; i < arr.length; i++){
+			int random = (int)(Math.random()*arr.length);
+			swap(arr,i,random);
+		}
 	}
 	private static void print(int[] arr){
-		
+		for()
 	}
 }
