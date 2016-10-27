@@ -90,7 +90,7 @@ public class ArrayMethods {
 	}
 	private static void testPrimes(int numberToTest){
 		int lastToCheck = (int)(Math.sqrt(numberToTest));
-		boolean[] theNumbers = new boolean[numberToTest];
+		boolean[] theNumbers = new boolean[numberToTest]; 
 		for(int i = 0; i < numberToTest; i++){
 			theNumbers[i]= true;
 		}
