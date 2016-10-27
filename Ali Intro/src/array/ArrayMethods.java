@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Random;
+
 public class ArrayMethods {
 
 	public static void main(String[] args) {
@@ -29,20 +31,17 @@ public class ArrayMethods {
 		arr[i] = placeholder;
 	}
 
-	private static boolean chackHalfway(int[] arr, int searchValue,int begin, int end){
+	public static boolean checkHalfway(int[] arr, int searchValue,int begin, int end){
 		return searchValue < arr[(begin+end)/2];
 	}
-	private static void shuffle(int[] arr){
+	public static void shuffle(int[] arr){
 		for(int i = 0; i < arr.length; i++){
 			int random = (int)(Math.random()*arr.length);
 			swap(arr,i,random);
 		}
 	}
-	private static void print(int[] arr){
-		//
-	}
 	public static int countUnderBound(double[] arr, double d){
-		int numberElements = 0;
+		int ctr = 0;
 		for( int i = 0; i < arr.length; i++){
 			if(arr[i] <d){
 				ctr++;
@@ -68,11 +67,49 @@ public class ArrayMethods {
 			}
 			return false;
 		}
+		return false;
 	}
 	public static int[] getSubArray(int [] arr, int startIndex, int endIndex){
 		int [] subArray = new int[endIndex - startIndex +1];
 		for(int i = 0; i<subArray.length; i++){
 			subArray[i] = arr[startIndex +i];
 		}
+		return subArray;
+	}
+	
+	private static int[] randomArrayWithNoRepeat (int[] arr){
+		int[] newArr = new int[arr.length];
+		for(int i = 0; i < newArr.length; i++){
+			int add = arr[(int)Math.random() * arr.length];
+			while(indexOf(arr,add) > -1){
+				add = arr[(int)Math.random()*arr.length];
+			}
+			newArr[i] = add;
+		}
+		return newArr;
+	}
+	private static void testPrimes(int numberToTest){
+		int lastToCheck = (int)(Math.sqrt(numberToTest));
+		boolean[] theNumbers = new boolean[numberToTest];
+		for(int i = 0; i < numberToTest; i++){
+			theNumbers[i]= true;
+		}
+		theNumbers[0] = false;
+		theNumbers[1] = false;
+		int increment = 2;
+		boolean first = true;
+		for(int test = 2; test <= lastToCheck; test = test + increment){
+			if(!first){
+				theNumbers[test] = false;
+			}
+		}
+	}
+	private static int indexOf(int[] arr, int add) {
+		for(int i = 0; i < arr.length; i++){
+			if(arr[i] == add){
+				return i;
+			}
+		}
+			return -1;
 	}
 }
