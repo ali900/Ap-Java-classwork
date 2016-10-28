@@ -6,7 +6,17 @@ public class ArrayMethods {
 
 	public static void main(String[] args) {
 		int[] arr = {2,3,4,6,9, 11, 12,15};
+		long startTime = System.currentTimeMillis();
 		
+		SampleElement sample = new SampleElement(10);
+		sample.increase();
+		System.out.println("The sample element has"
+				+ " a number equal to "+sample.getNumber());
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println("Completed method in "
+				+ (endTime-startTime)+ " milliseconds");
+		testPrimes(50);		
 /*		swap(arr, 0, arr.length-1);
 		if (checkHalfWay(arr,12,0, arr.length-1)){
 			System.out.println("The number you are searching for is less than the value"
@@ -77,7 +87,7 @@ public class ArrayMethods {
 		return subArray;
 	}
 	
-	private static int[] randomArrayWithNoRepeat (int[] arr){
+	/*private static int[] randomArrayWithNoRepeat (int[] arr){
 		int[] newArr = new int[arr.length];
 		for(int i = 0; i < newArr.length; i++){
 			int add = arr[(int)Math.random() * arr.length];
@@ -87,29 +97,39 @@ public class ArrayMethods {
 			newArr[i] = add;
 		}
 		return newArr;
-	}
-	private static void testPrimes(int numberToTest){
+	}*/
+	private static void testPrimes(int numberToTest) {
 		int lastToCheck = (int)(Math.sqrt(numberToTest));
-		boolean[] theNumbers = new boolean[numberToTest]; 
-		for(int i = 0; i < numberToTest; i++){
-			theNumbers[i]= true;
+		boolean[] theNumbers = new boolean[numberToTest];
+		for(int i=0; i < numberToTest; i++){
+			theNumbers[i] = true;
 		}
 		theNumbers[0] = false;
 		theNumbers[1] = false;
-		int increment = 2;
-		boolean first = true;
-		for(int test = 2; test <= lastToCheck; test = test + increment){
-			if(!first){
-				theNumbers[test] = false;
+		
+		for(int prime = 2; prime <= lastToCheck; prime++){
+			//when checking 50 numbers,
+			//tests 2,3,4,5,6,7 as if prime
+			if(theNumbers[prime]){
+				//only checks numbers that are prime
+				//(numbers that haven't been "crossed off")
+				//won't check 4 and 6 (crossed off by 2)
+				System.out.println("\n"+prime+ " is prime. "
+						+ "Crossing off:");
+
+				for(int test = prime + prime; test < numberToTest; 
+						test = test + prime){
+					System.out.print(test+", ");
+					theNumbers[test] = false;
+				}
 			}
 		}
-	}
-	private static int indexOf(int[] arr, int add) {
-		for(int i = 0; i < arr.length; i++){
-			if(arr[i] == add){
-				return i;
+		System.out.println();
+		for(int i = 0; i < theNumbers.length; i++){
+			if(theNumbers[i]){
+				System.out.println(i + " is prime.");
 			}
 		}
-			return -1;
+		
 	}
-}
+}	
