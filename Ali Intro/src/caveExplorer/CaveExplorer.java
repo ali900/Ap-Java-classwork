@@ -8,6 +8,7 @@ public class CaveExplorer {
 	public static Scanner in;
 	public static CaveRoom currentRoom;
 	private static Inventory inventory;
+	private static String input;
 	
 	public static void main (String[] args){
 		caves= new CaveRoom[5][5];
@@ -21,7 +22,7 @@ public class CaveExplorer {
 		caves[0][1].setConnection(CaveRoom.EAST, caves[0][2], new Door());
 		caves[0][2].setConnection(CaveRoom.SOUTH, caves[1][2], new Door());
 		caves[1][2].setConnection(CaveRoom.SOUTH, caves[2][2], new Door());
-		inventory = new Inventory();
+		setInventory(new Inventory());
 		startExploring();
 	}
 
@@ -30,9 +31,26 @@ public class CaveExplorer {
 			System.out.println("inventory.getDescription");
 			System.out.println(currentRoom.getDescription());
 			System.out.println("What would you like to do?");
-			String input= in.nextLine();
+			//String
+			setInput(in.nextLine());
 		}
 		
+	}
+
+	public static String getInput() {
+		return input;
+	}
+
+	public static void setInput(String input) {
+		CaveExplorer.input = input;
+	}
+
+	public static Inventory getInventory() {
+		return inventory;
+	}
+
+	public static void setInventory(Inventory inventory) {
+		CaveExplorer.inventory = inventory;
 	}
 	
 }

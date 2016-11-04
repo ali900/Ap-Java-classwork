@@ -48,6 +48,11 @@ public class CaveRoom {
 	
 	}
 
+	private String toDirection(int dir) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public String getContents(){
 		return contents;
 	}

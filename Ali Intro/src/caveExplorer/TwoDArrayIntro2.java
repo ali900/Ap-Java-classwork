@@ -32,7 +32,37 @@ public class TwoDArrayIntro2 {
 				
 			}
 		}
-		return null;
+		//this method only checks elements in the [][]
+		//so it is not necessary to verify if they are valid
+		/*for(int row = 0; row < mines.length; row++){
+			for(int col= 0; col < mines[row].length; col++){
+				if(Math.abs(row-r)+Math.abs(col-c) == 1 &&
+						//check if true
+						mines[row][col]){
+					count++;
+				}
+			}
+		*/
+		//this method is helpful when you want to be very specific
+		//above
+		count += validAndTrue(mines, r-1, c);
+		//below
+		count += validAndTrue(mines, r+1, c);
+		//right
+		count += validAndTrue(mines, r, c+1);
+		//left
+		count += validAndTrue(mines, r, c-1);
+		return count +"";
+	}
+
+	private static int validAndTrue(boolean[][] mines, int i, int j) {
+		//checks valid
+		if( i >= 0 && i < mines.length && j >= 0 && j < mines[0].length&&
+				mines[i][j]){
+			//check if its true
+			return 1;
+		}
+		return 0;
 	}
 
 	private static void createMines(boolean[][] mines, int numberOfMines) {
