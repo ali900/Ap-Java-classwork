@@ -11,13 +11,33 @@ public class Pokemon {
 		this.level=level;
 		this.name = name;
 		this.poisoned = false;
-		
+
 	}
 	public void iChooseYou(){
 		System.out.print(name+"," + name + "!");
-		
-}
-	public int gethp(){
+
+	}
+	public int getHP(){
 		return hp;
+	}
+	public void attack(Pokemon target, Attack attack){
+		if(Math.random() < .9){
+			attack.attack(target);
+			System.out.println("The attack hit");
+		}else{
+			System.out.println("The attack missed");
+		}
+	}
+	public void setHP(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setPoisoned(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void lapse() {
+		// TODO Auto-generated method stub
+		
 	}
 }
