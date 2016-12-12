@@ -20,12 +20,3 @@ class Calculator {
 
 }
 
-class MathOperators{
-	public static void main(String[] args){
-		Scanner bucky= new Scanner(System.in);
-		int girls, boys, people;
-		girls = 6;
-		boys = 3;
-		people= boys + girls;
-	}
-}

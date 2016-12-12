@@ -9,10 +9,10 @@ public class AliBot {
 	static String response;
 	static Scanner input;
 	static String user;
-	static Topic school;
-	static Topic class; 
+	//static Topic school;
+	//static Topic class; 
 	//list all the chatBots available under this class
-	static chatBot school;
+	//static chatBot school;
 
 	public static void main(String[] args) {
 		//demonstrateStringMethods();
@@ -45,7 +45,7 @@ public class AliBot {
 				//exit this while loop
 				inMainLoop = false;
 				//go to the schools talk method
-				school.talk();
+		//		school.talk();
 			}
 
 			else{
@@ -108,7 +108,7 @@ this method is private bc its only used by the method its helping
 	public static void createField(){ 
 		input = new Scanner(System. in);
 		user = "";
-		school = new AliSchool();
+//		school = new AliSchool();
 	}
 
 	public static void demonstrateStringMethods(){
