@@ -9,5 +9,7 @@ class Apples {
 		TunaObject.setName(temp);
 		TunaObject.getSaying();
 	}
-
+	
+	private static int bobby= 0;
+	
 }
