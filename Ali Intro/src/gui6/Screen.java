@@ -8,6 +8,7 @@ import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import gui6.components.Clickable;
 import gui6.components.Visible;
 
 public abstract class Screen {
@@ -107,6 +108,11 @@ public abstract class Screen {
 			viewObjects.remove(v);
 			viewObjects.add(v);
 		}
+	}
+
+	public void remove(Clickable v) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 
