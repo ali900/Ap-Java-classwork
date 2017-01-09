@@ -1,6 +1,6 @@
 package gui6.whackAMole;
 
-import gui6.GUIApplication;
+import gui.simon.GUIApplication;
 
 public class WhackAMoleGame extends GUIApplication {
 

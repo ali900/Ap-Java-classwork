@@ -1,4 +1,4 @@
-package gui6;
+package gui.simon;
 
 import java.awt.Graphics;
 import java.awt.event.MouseListener;

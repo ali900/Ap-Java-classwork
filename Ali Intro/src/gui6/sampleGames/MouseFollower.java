@@ -1,6 +1,6 @@
 package gui6.sampleGames;
 
-import gui6.GUIApplication;
+import gui.simon.GUIApplication;
 import gui6.Screen;
 import gui6.screens.CoordinateScreen;
 
