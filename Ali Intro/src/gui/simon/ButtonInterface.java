@@ -1,5 +1,7 @@
 package gui.simon;
 
-public interface ButtonInterface {
+import gui6.components.Clickable;
+
+public interface ButtonInterface extends Clickable{
 
 }
